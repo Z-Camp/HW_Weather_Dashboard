@@ -7,7 +7,7 @@
 
   /* api call to get weather by city */
   function getWeather(city){
-      $.get("http://api.openweathermap.org/data/2.5/weather?q="+city+"&units=imperial&appid=d11771b7ba65e99baa089a03cbd1362b", function(data){
+      $.get("https://api.openweathermap.org/data/2.5/weather?q="+city+"&units=imperial&appid=d11771b7ba65e99baa089a03cbd1362b", function(data){
         console.log(data);
 
           $("#city").html(data.main.name);
@@ -18,7 +18,7 @@
           $("#speed").html("Wind Speed: " + data.wind.speed + " mph");
       });
       /* api call 5-day forecast */
-      $.get("http://api.openweathermap.org/data/2.5/forecast?q="+city+"&units=imperial&appid=d11771b7ba65e99baa089a03cbd1362b", function(data){
+      $.get("https://api.openweathermap.org/data/2.5/forecast?q="+city+"&units=imperial&appid=d11771b7ba65e99baa089a03cbd1362b", function(data){
       console.log(data);
 
     var dayOne = moment().format("M/D/YYYY");
